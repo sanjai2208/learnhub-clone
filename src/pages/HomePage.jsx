@@ -29,18 +29,18 @@ const HomePage = () => {
             Our Placement Partners
           </h2>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 items-center text-gray-400">
-            <img src="/airbnb.png" alt="Airbnb" className="h-15 mx-auto" />
-            <img src="/grabyo.png" alt="Grabyo" className="h-15 mx-auto" />
+            <img src="/airbnb.png" alt="Airbnb" className="h-14 mx-auto" />
+            <img src="/grabyo.png" alt="Grabyo" className="h-14 mx-auto" />
             <img
               src="/lifegroups.png"
               alt="lifegroups"
-              className="h-15 mx-auto"
+              className="h-14 mx-auto"
             />
-            <img src="/myob.png" alt="Myob" className="h-15 mx-auto" />
-            <img src="/tailus.png" alt="Tailus" className="h-15 mx-auto" />
-            <img src="/microsoft.png" alt="Microsoft" className="h-15 mx-auto" />
-            <img src="/coty.png" alt="Coty" className="h-15 mx-auto" />
-            <img src="/lilly.png" alt="Lilly" className="h-15 mx-auto" />
+            <img src="/myob.png" alt="Myob" className="h-14 mx-auto" />
+            <img src="/tailus.png" alt="Tailus" className="h-14 mx-auto" />
+            <img src="/microsoft.png" alt="Microsoft" className="h-14 mx-auto" />
+            <img src="/coty.png" alt="Coty" className="h-14 mx-auto" />
+            <img src="/lilly.png" alt="Lilly" className="h-14 mx-auto" />
           </div>
           <div className="text-center mt-10">
             <button className="bg-lime-300 text-black font-semibold py-3 px-6 rounded-2xl hover:bg-lime-400 transition-colors">
@@ -133,18 +133,18 @@ const HomePage = () => {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-start max-w-7xl mx-auto">
               <div className="text-left">
                 <h2 className="text-3xl lg:text-4xl font-bold leading-tight space-y-4">
-                  <div className="text-green-400 mb-2">
+                  <div className="text-white mb-0">
                     Empower your future
                     <br />
                     with cutting-edge skills
                   </div>
-                  <div className="text-blue-400 mb-2">
+                  <div className="text-white mb-0">
                     New, Embrace innovation,
                     <br />
                     master technology, &<br />
                     shape the digital world
                   </div>
-                  <div className="text-red-500 mb-2">
+                  <div className="text-white mb-0">
                     Your journey to success
                     <br />
                     starts here.
