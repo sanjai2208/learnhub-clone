@@ -1,13 +1,20 @@
-import React from 'react'
+
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import HomePage from "./pages/HomePage";
+import AdminPage from "./pages/AdminPage"; // We will create this page next
+import { StudentProvider } from "./context/StudentContext"; // Import the provider
 
 const App = () => {
   return (
-    <div className="bg-slate-900 min-h-screen flex justify-center items-center">
-      <h1 className="text-3xl font-bold text-white underline decoration-sky-500">
-        Hello, Tailwind CSS is working!
-      </h1>
-    </div>
-  )
-}
+    <StudentProvider>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/form" element={<AdminPage />} /> 
+        </Routes>
+      </BrowserRouter>
+    </StudentProvider>
+  );
+};
 
-export default App
+export default App;

@@ -1,13 +1,18 @@
-import React from "react";
+import React, { useContext } from "react";
+import { StudentContext } from "../context/StudentContext";
 import Header from "../components/Header";
-import Footer from "../components/Footer" 
+import Footer from "../components/Footer";
 const HomePage = () => {
+  const { students } = useContext(StudentContext);
+  const total = students.length;
+  const placed = students.filter((s) => s.status === "Placed").length;
+  const unplaced = total - placed;
   return (
     <div className="bg-black text-white min-h-screen">
       <Header />
       <main className="container mx-auto px-6 py-16">
         <section className="text-center py-20">
-          <h1 className='className="text-5xl md:text-7xl font-extrabold leading-tight'>
+          <h1 className="text-5xl md:text-7xl font-extrabold leading-tight">
             Learn from the best, be <br /> your best..
           </h1>
           <p className="mt-6 text-lg text-gray-300 max-w-2xl mx-auto">
@@ -43,133 +48,156 @@ const HomePage = () => {
             </button>
           </div>
         </section>
-        <section>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            <div className="text-left">
-              <p className="text-cyan-400 font-bold uppercase tracking-wider">
-                Open Source Theme and UI Components
+        <section className="bg-black text-white py-16">
+          <div className="container mx-auto px-4">
+            <div className="flex flex-col items-center mb-12">
+              <p className="text-cyan-400 font-bold uppercase tracking-wider text-center">
+                OPEN SOURCE THEME AND UI COMPONENTS
               </p>
-              <h2 className="text-4xl md:text-5xl font-extrabold my-4 leading-tight">
+              <h2 className="text-4xl md:text-5xl font-extrabold mt-6 mb-10 text-center max-w-4xl mx-auto leading-tight">
                 Geaux Astro helps you craft beautiful websites efficiently
               </h2>
-              <div className="space-y-8 mt-8">
-                <div className="flext items-start">
-                  <img
-                    src="/certificate.png"
-                    alt="Certificate Distribution"
-                    className="w-8 h-8 mr-4"
-                  />
+            </div>
+
+            <div className="flex flex-col lg:flex-row justify-between items-center gap-16">
+              <div className="space-y-12 max-w-xl">
+                <div className="flex items-start">
+                  <div className="w-12 h-12 mr-4 flex-shrink-0">
+                    <img
+                      src="/certificate.png"
+                      alt="Certificate Distribution"
+                      className="w-12 h-12 object-contain"
+                      style={{
+                        filter:
+                          "brightness(0) saturate(100%) invert(23%) sepia(100%) saturate(2843%) hue-rotate(95deg) brightness(97%) contrast(104%)",
+                      }}
+                    />
+                  </div>
                   <div>
-                    <h3 className="text-lg font-bold">
+                    <h3 className="text-xl font-bold">
                       Certificate Distribution
                     </h3>
-                    <p className="mt-1 text-gray-400">
-                      {" "}
+                    <p className="mt-2 text-gray-300">
                       We offer certificates to validate and recognize your
                       achievement.
                     </p>
                   </div>
                 </div>
-                <div className="flext items-start">
-                  <img
-                    src="/knowledge.png"
-                    alt="Knowledge"
-                    className="w-8 h-8 mr-4"
-                  />
+
+                <div className="flex items-start">
+                  <div className="w-12 h-12 mr-4 flex-shrink-0">
+                    <img
+                      src="/knowledge.png"
+                      alt="Knowledge"
+                      className="w-12 h-12 object-contain"
+                      style={{
+                        filter:
+                          "brightness(0) saturate(100%) invert(16%) sepia(89%) saturate(6054%) hue-rotate(238deg) brightness(91%) contrast(136%)",
+                      }}
+                    />
+                  </div>
                   <div>
-                    <h3 className="text-lg font-bold">
-                      Certificate Distribution
-                    </h3>
-                    <p className="mt-1 text-gray-400">
+                    <h3 className="text-xl font-bold">Knowledge</h3>
+                    <p className="mt-2 text-gray-300">
                       We deliver transformative knowledge that empowers and
                       inspires.
                     </p>
                   </div>
                 </div>
-                <div className="flext items-start">
-                  <img
-                    src="/hands-on.png"
-                    alt="Hands-on Experience"
-                    className="w-8 h-8 mr-4"
-                  />
+
+                <div className="flex items-start">
+                  <div className="w-12 h-12 mr-4 flex-shrink-0">
+                    <img
+                      src="/hands-on.png"
+                      alt="Hands-on Experience"
+                      className="w-12 h-12 object-contain"
+                      style={{
+                        filter:
+                          "brightness(0) saturate(100%) invert(21%) sepia(99%) saturate(7414%) hue-rotate(359deg) brightness(94%) contrast(118%)",
+                      }}
+                    />
+                  </div>
                   <div>
-                    <h3 className="text-lg font-bold">
-                      Certificate Distribution
-                    </h3>
-                    <p className="mt-1 text-gray-400">
-                      {" "}
+                    <h3 className="text-xl font-bold">Hands-on Experience</h3>
+                    <p className="mt-2 text-gray-300">
                       We provide hands-on experience for real-world learning.
                       You learn best by doing.
                     </p>
                   </div>
                 </div>
               </div>
-            </div>
-            <div className="flex justify-center">
-              <img
-                src="/dashboard-graphic.png"
-                alt="Dashboard Graphic"
-                className="w-full h-auto rounded-lg shadow-2xl"
-              />
+
+              <div className="flex-shrink-0 mt-8 lg:mt-0">
+                <img
+                  src="/dashboard-graphic.png"
+                  alt="Dashboard Graphic"
+                  className="w-full max-w-xl lg:max-w-2xl h-auto rounded-lg"
+                />
+              </div>
             </div>
           </div>
         </section>
 
         <section className="py-20 bg-black text-white">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center max-w-7xl mx-auto px-6">
-            <div className="text-left">
-              <h2 className="text-4xl md:text-5xl font-extrabold leading-tight">
-                <span className="text-green-500">
-                  Empower your future <br />
-                  with cutting-edge skills
-                </span>
-                <br />
-                <span className="text-blue-500">
-                  New, Embrace innovation, master technology, & shape the
-                  digital world
-                </span>
-                <br />
-                <span className="text-red-500">
-                  Your journey to success starts here.
-                </span>
-              </h2>
-            </div>
+          <div className="container mx-auto px-6">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-start max-w-7xl mx-auto">
+              <div className="text-left">
+                <h2 className="text-3xl lg:text-4xl font-bold leading-tight space-y-4">
+                  <div className="text-green-400 mb-2">
+                    Empower your future
+                    <br />
+                    with cutting-edge skills
+                  </div>
+                  <div className="text-blue-400 mb-2">
+                    New, Embrace innovation,
+                    <br />
+                    master technology, &<br />
+                    shape the digital world
+                  </div>
+                  <div className="text-red-500 mb-2">
+                    Your journey to success
+                    <br />
+                    starts here.
+                  </div>
+                </h2>
+              </div>
 
-            <div>
-              <p className="text-gray-300 text-lg mb-8">
-                Join our course with a proven track record of success, where
-                learning isn’t just about gaining skills; it’s about growing
-                them. Join us, learn with confidence, and watch your skills
-                soar.
-              </p>
+              <div className="space-y-10">
+                <p className="text-gray-300 text-lg leading-relaxed">
+                  Join our course with a proven track record of success, where
+                  learning isn't just about gaining skills; it's about growing
+                  them. Join us, learn with confidence, and watch your skills
+                  soar.
+                </p>
 
-              <div className="flex flex-wrap gap-8">
-                <div className="text-center">
-                  <span className="bg-lime-400 text-black px-3 py-1 rounded-full text-sm font-bold">
-                    Total Students
-                  </span>
-                  <p className="text-5xl font-bold mt-3">11</p>
-                </div>
+                <div className="flex flex-wrap gap-6">
+                  <div className="text-center">
+                    <div className="bg-lime-400 text-black px-4 py-1 rounded-full text-sm font-bold inline-block">
+                      Total Students
+                    </div>
+                    <p className="text-5xl font-bold mt-3">2</p>
+                  </div>
 
-                <div className="text-center">
-                  <span className="bg-lime-400 text-black px-3 py-1 rounded-full text-sm font-bold">
-                    Placed Students
-                  </span>
-                  <p className="text-5xl font-bold mt-3">5</p>
-                </div>
+                  <div className="text-center">
+                    <div className="bg-lime-400 text-black px-4 py-1 rounded-full text-sm font-bold inline-block">
+                      Placed Students
+                    </div>
+                    <p className="text-5xl font-bold mt-3">2</p>
+                  </div>
 
-                <div className="text-center">
-                  <span className="bg-lime-400 text-black px-3 py-1 rounded-full text-sm font-bold">
-                    Unplaced Students
-                  </span>
-                  <p className="text-5xl font-bold mt-3">6</p>
+                  <div className="text-center">
+                    <div className="bg-lime-400 text-black px-4 py-1 rounded-full text-sm font-bold inline-block">
+                      Unplaced Students
+                    </div>
+                    <p className="text-5xl font-bold mt-3">0</p>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </section>
       </main>
-      <Footer/>
+      <Footer />
     </div>
   );
 };
