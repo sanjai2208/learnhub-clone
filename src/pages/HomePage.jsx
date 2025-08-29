@@ -29,18 +29,18 @@ const HomePage = () => {
             Our Placement Partners
           </h2>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 items-center text-gray-400">
-            <img src="/airbnb.png" alt="Airbnb" className="h-8 mx-auto" />
-            <img src="/grabyo.png" alt="Grabyo" className="h-8 mx-auto" />
+            <img src="/airbnb.png" alt="Airbnb" className="h-15 mx-auto" />
+            <img src="/grabyo.png" alt="Grabyo" className="h-15 mx-auto" />
             <img
               src="/lifegroups.png"
               alt="lifegroups"
-              className="h-8 mx-auto"
+              className="h-15 mx-auto"
             />
-            <img src="/myob.png" alt="Myob" className="h-8 mx-auto" />
-            <img src="/tailus.png" alt="Tailus" className="h-8 mx-auto" />
-            <img src="/microsoft.png" alt="Microsoft" className="h-8 mx-auto" />
-            <img src="/coty.png" alt="Coty" className="h-8 mx-auto" />
-            <img src="/lilly.png" alt="Lilly" className="h-8 mx-auto" />
+            <img src="/myob.png" alt="Myob" className="h-15 mx-auto" />
+            <img src="/tailus.png" alt="Tailus" className="h-15 mx-auto" />
+            <img src="/microsoft.png" alt="Microsoft" className="h-15 mx-auto" />
+            <img src="/coty.png" alt="Coty" className="h-15 mx-auto" />
+            <img src="/lilly.png" alt="Lilly" className="h-15 mx-auto" />
           </div>
           <div className="text-center mt-10">
             <button className="bg-lime-300 text-black font-semibold py-3 px-6 rounded-2xl hover:bg-lime-400 transition-colors">
@@ -67,10 +67,6 @@ const HomePage = () => {
                       src="/certificate.png"
                       alt="Certificate Distribution"
                       className="w-12 h-12 object-contain"
-                      style={{
-                        filter:
-                          "brightness(0) saturate(100%) invert(23%) sepia(100%) saturate(2843%) hue-rotate(95deg) brightness(97%) contrast(104%)",
-                      }}
                     />
                   </div>
                   <div>
@@ -90,10 +86,7 @@ const HomePage = () => {
                       src="/knowledge.png"
                       alt="Knowledge"
                       className="w-12 h-12 object-contain"
-                      style={{
-                        filter:
-                          "brightness(0) saturate(100%) invert(16%) sepia(89%) saturate(6054%) hue-rotate(238deg) brightness(91%) contrast(136%)",
-                      }}
+                      
                     />
                   </div>
                   <div>
@@ -111,10 +104,7 @@ const HomePage = () => {
                       src="/hands-on.png"
                       alt="Hands-on Experience"
                       className="w-12 h-12 object-contain"
-                      style={{
-                        filter:
-                          "brightness(0) saturate(100%) invert(21%) sepia(99%) saturate(7414%) hue-rotate(359deg) brightness(94%) contrast(118%)",
-                      }}
+                      
                     />
                   </div>
                   <div>
